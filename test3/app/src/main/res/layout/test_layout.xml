@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/2"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:visibility="visible">
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="fghfName"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+</android.support.constraint.ConstraintLayout>
