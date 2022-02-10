@@ -185,20 +185,12 @@ int main() {
               }                   
              char buf[n-1];                   
              uint8_t res[2*(n-1)];         
-             fgets(buf, sizeof(buf), fin);                               
+             fgets(buf, sizeof(buf), fin);                             
              
-                
-             //PSBT psbt;
-             ElectrumTx psbt;                                                                 
-             
+             PSBT psbt;    
              fromBase64(buf, sizeof(buf), res, sizeof(res));        
-             encoding_format f=RAW;  
-            
-            // psbt.parse(res, sizeof(res), f);  
-             psbt.parse(res,f);  
-             
-
-           
+             encoding_format f=RAW;             
+             psbt.parse(res, sizeof(res), f);  
            
             
             
@@ -206,7 +198,7 @@ int main() {
             if(psbt.isValid()){
                temp_str="valid";        
             }else{
-               temp_str="nevalid";  
+               temp_str="error";  
             }
    
             char* char_temp_str=&temp_str[0];     
