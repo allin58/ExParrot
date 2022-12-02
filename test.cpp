@@ -165,7 +165,7 @@ int main() {
         HDPrivateKey hd_root(mnemonic,"");
         //HDPrivateKey hd_account=hd_root.derive("m/84'/1'/0'");
         //HDPrivateKey hd_account=hd_root.derive("m/49'/1'/0'");
-        HDPrivateKey hd_account=hd_root.derive("m/84'/0'/0'");
+        HDPrivateKey hd_account=hd_root.derive("m/84'/1'/0'");
         // extended public key
         std::string xpub_account=hd_account.xpub();
         char* char_xpub_account = &xpub_account[0];
@@ -205,7 +205,7 @@ int main() {
             fprintf(ftemp, char_temp_str);
             fprintf(ftemp, char_n);                           
             for(int i=0; i<psbt.tx.outputsNumber; i++){
-                temp_str=psbt.tx.txOuts[i].address(&Mainnet);
+                temp_str=psbt.tx.txOuts[i].address(&Testnet);
                 char* char_temp_str1=&temp_str[0];
                 fprintf(ftemp, char_temp_str1);
                 fprintf(ftemp, char_n);            
